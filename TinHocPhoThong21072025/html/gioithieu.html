@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu website</title>
+  <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/trangchu.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/topnav.css" />
+  <!-- JS -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/trangchu.js" defer></script>
+  <script src="../js/taikhoan.js" defer></script>
+  <script src="../js/responsive.js" defer></script>
+</head>
+
+<body>
+  <!-- Banner -->
+  <div class="banner-top" style="position: relative;">
+    <a href="trangchu.html" class="banner reloadTrang">
+      <img src="../img/banner.png" alt="Banner Tin học phổ thông" style="width: 100%;" />
+    </a>
+
+    <!-- Tài khoản -->
+    <div class="header-right" style="position: absolute; bottom: 10px; right: 20px; z-index: 2;">
+      <div class="dropdown" id="dkdn">
+        <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="dangky.html">Đăng ký</a>
+          <a href="dangnhap.html">Đăng nhập</a>
+        </div>
+      </div>
+
+      <div id="divTaikhoan" class="dropdown" style="display: none;">
+        <button id="taikhoan" class="dropbtn"></button>
+        <div class="dropdown-content" id="ttTaikhoan">
+          <ul id="info">
+            <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+            <li><b>Mật khẩu: </b><span id="matkhau"></span>
+              <span id="passEye"><img width="22" src="../img/closePassEye.png" alt="Ẩn/hiện mật khẩu" /></span>
+            </li>
+            <li><b>Họ và tên: </b><span id="hoten"></span></li>
+            <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+          </ul>
+          <div>
+            <button type="button" id="doiMK">Đổi mật khẩu</button>
+            <button type="button" id="dangXuat">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Menu điều hướng chính === -->
+  <div class="menu-container">
+    <nav class="topnav" id="myTopnav">
+      <a href="trangchu.html">TRANG CHỦ</a>
+      <a href="gioithieu.html">GIỚI THIỆU</a>
+
+      <!-- Dropdown: Chiêu sinh -->
+      <div class="dropdown">
+        <button class="dropbtn">CHIÊU SINH</button>
+        <div class="dropdown-content">
+          <a href="khoi10.html">Khối 10</a>
+          <a href="khoi11.html">Khối 11</a>
+          <a href="khoi12.html">Khối 12</a>
+        </div>
+      </div>
+
+      <a href="elearning.html">E-LEARNING</a>
+
+      <a href="lienhe.html">LIÊN HỆ</a>
+
+      <!-- Biểu tượng menu mobile -->
+      <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Nội dung chính -->
+  <main>
+    <div class="container">
+      <br>
+      <div class="description-catalog">
+        <div class="title-desc-catalog">
+          <h2>Điều hòa - Máy lạnh</h2>
+        </div>
+        <div class="content-desc-catalog">
+          <p>Điều hòa, máy lạnh là những thiết bị ngày càng được người Việt ưa chuộng sử dụng để chống lại cái nóng oi
+            bức của mùa hè và cái lạnh cắt da cắt thịt của mùa đông.</p>
+          <p>Nhóm chúng em mang đến một sản phẩm đang có xu thế, tiện nghi và sự ưa chuộng trong cuộc sống.</p>
+        </div>
+      </div>
+
+      <div class="phan-wrapper">
+        <div class="phan-header">Mục lục</div>
+        <ul id="bangTomTat">
+          <li><a class="tomtat" href="#phan-1">1. Giới thiệu website</a></li>
+          <li><a class="tomtat" href="#phan-2">2. Tin tức môi trường</a></li>
+          <li><a class="tomtat" href="#phan-3">3. Mẹo cải thiện không khí</a></li>
+        </ul>
+      </div>
+
+      
+      <div id="phan-1">
+        <h2>Giới thiệu website:</h2>
+        <p>
+          <strong>Website CleanAir</strong> được xây dựng với mục tiêu nâng cao nhận thức cộng đồng về vấn đề ô nhiễm không khí
+          và cung cấp thông tin hữu ích về các giải pháp cải thiện chất lượng không khí trong sinh hoạt và đời sống.
+        </p>
+        <p>
+          Trang web cung cấp các chuyên mục như: tin tức về môi trường, mẹo làm sạch không khí trong nhà, các thiết bị lọc khí hiệu quả,
+          cùng các sản phẩm thân thiện với môi trường. Ngoài ra, website còn tích hợp các công cụ hỗ trợ người dùng tra cứu chỉ số chất lượng không khí (AQI)
+          và theo dõi sự thay đổi theo khu vực.
+        </p>
+        <p>
+          Thông qua nền tảng trực tuyến, chúng tôi mong muốn góp phần lan tỏa thông điệp "Vì một không khí trong lành hơn",
+          thúc đẩy lối sống xanh, sạch và lành mạnh trong cộng đồng.
+        </p>
+      </div>
+
+      <div id="phan-2">
+        <h2>Tin tức môi trường</h2>
+        <p>
+          Cập nhật nhanh chóng các thông tin mới nhất về tình trạng ô nhiễm không khí tại Việt Nam và trên thế giới,
+          các nghiên cứu khoa học, chính sách bảo vệ môi trường, và những hoạt động cộng đồng hướng tới bầu không khí sạch hơn.
+        </p>
+      </div>
+
+      <div id="phan-3">
+        <h2>Mẹo cải thiện không khí trong nhà</h2>
+        <p>
+          Chia sẻ các phương pháp đơn giản nhưng hiệu quả để làm sạch không khí tại nhà như sử dụng cây xanh, máy lọc không khí,
+          vệ sinh thường xuyên, hạn chế hóa chất độc hại và tăng cường thông gió tự nhiên.
+        </p>
+      </div>
+    </div>
+
+    
+    
+  </main>
+
+   <!-- === Nút trở về đầu trang === -->
+    <div id="backToTop">
+      <a href="#top">⬆</a>
+    </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <ul>
+          <span>Thông tin về</span>
+          <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+          <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Tài khoản</span>
+          <li><a href="#">Tài khoản của tôi</a></li>
+          <li><a href="dangnhap.html">Đăng nhập</a></li>
+          <li><a href="dangky.html">Đăng ký</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Hỗ trợ</span>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Quy định sử dụng</a></li>
+        </ul>
+      </div>
+
+      <!-- Thông tin liên hệ chia cột -->
+      <div class="footer-column">
+        <ul>
+          <span>Liên hệ</span>
+          <li>Website: <a href="https://hoctinonline.vn" target="_blank" rel="noopener noreferrer">HocTinOnline.vn</a></li>
+          <li>Địa chỉ: Tỉnh An Giang, Việt Nam</li>
+          <li>Email: <a href="mailto:nvdinhm1@gmail.com.vn">nvdinhm1@gmail.com.vn</a></li>
+          <li>Hotline: 0825 701 543</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-info" style="text-align: center; padding-top: 2px;">
+      <p>&copy; 2025 <strong><a href="trangchu.html" style="text-decoration: none; color: inherit;">HocTinOnline.vn</a></strong> – Website dạy và học Tin học phổ thông.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

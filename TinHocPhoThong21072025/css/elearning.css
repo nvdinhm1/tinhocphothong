@@ -1,0 +1,131 @@
+/* ==================== TIÊU ĐỀ CÁC PHẦN ==================== */
+main .phan-1 h1,
+main .phan-2 h1,
+main .phan-3 h1 {
+  font-size: 20px;
+  color: #0056b3;
+  margin-bottom: 2px;
+  border-left: 5px solid #0056b3;
+  padding-left: 12px;
+  background-color: #e8f0fe;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: 'K2D', 'Roboto', sans-serif; /* Phông chữ ưu tiên */
+}
+
+/* ==================== LINK LIÊN KẾT OER ==================== */
+a[href*="oer.edu.vn"] {
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fadfdf;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+a[href*="oer.edu.vn"]:hover {
+  color: #fff;
+  background-color: #0056b3;
+  text-decoration: underline;
+}
+
+/* ==================== ĐOẠN VĂN ==================== */
+main .phan-1 p,
+main .phan-2 p,
+main .phan-3 p {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.75;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 7px 10px;
+  color: #000;
+}
+
+
+/* ==================== KHUNG XEM PDF HIỆN ĐẠI ==================== */
+.pdf-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Chiều cao chiếm 80% chiều cao màn hình */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ==================== NÚT TẢI XUỐNG HIỆN ĐẠI ==================== */
+.download-btn {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.download-btn a {
+  display: inline-block;
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.download-btn a:hover {
+  background: linear-gradient(90deg, #0056b3, #003f88);
+}
+
+.download-btn i {
+  margin-right: 8px;
+}
+
+/* ==================== ANIMATION CHO ICON ==================== */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(2px);
+  }
+}
+
+/* ==================== RESPONSIVE CHO MÀN HÌNH NHỎ ==================== */
+@media screen and (max-width: 600px) {
+  main > div {
+    margin: 10px 5%;
+  }
+
+  main .phan-1 h1,
+  main .phan-2 h1,
+  main .phan-3 h1 {
+    font-size: 18px;
+  }
+
+  main .phan-1 p,
+  main .phan-2 p,
+  main .phan-3 p {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  .pdf-container {
+    height: 60vh;
+  }
+
+  .download-btn a {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}

@@ -1,0 +1,132 @@
+/* ===== KHU VỰC CHỨA THANH MENU ===== */
+.menu-container {
+  position: relative;             /* Cho phép dropdown định vị tuyệt đối bên trong */
+  width: 80%;                     /* Chiều rộng khối chứa menu */
+  margin: 0 auto;                 /* Căn giữa khối theo chiều ngang */
+  background-color: #f05123;      /* Màu nền xanh dương */
+  z-index: 10;                    /* Đảm bảo menu hiển thị trên các phần khác */
+  padding-bottom: 40px;          /* Tạo khoảng trống dưới menu để dropdown không bị che */
+}
+
+
+/* ===== THANH ĐIỀU HƯỚNG CHÍNH ===== */
+.topnav {
+  width: 80%;                    /* Đồng bộ chiều rộng với .menu-container */
+  overflow: visible;            /* Cho phép dropdown hiển thị ra ngoài */
+  position: relative;           /* Tạo bối cảnh định vị cho phần tử con */
+  z-index: 10;                  /* Ưu tiên hiển thị trên các phần khác */
+}
+
+
+/* ===== KIỂU CHỮ DÙNG CHUNG CHO TOÀN MENU ===== */
+.topnav,
+.topnav a,
+.topnav .dropbtn,
+.topnav .dropdown-content a {
+font-family: 'UTM HelvetIns', 'Roboto', sans-serif; /* Phông chữ ưu tiên */
+}
+
+/* ===== CÁC MỤC TRONG MENU CHÍNH ===== */
+.topnav a,
+.topnav .dropbtn {
+  float: left;                  /* Căn trái các mục trong menu */
+  display: block;               /* Hiển thị theo dạng khối */
+  color: #ffffff;               /* Màu chữ trắng */
+  text-align: center;           /* Căn giữa nội dung */
+  padding: 8px 15px;           /* Khoảng cách giữa nội dung và viền */
+  text-decoration: none;        /* Bỏ gạch chân */
+  font-size: 15px;              /* Cỡ chữ cho menu chính */
+  background: none;             /* Không có nền */
+  border: none;                 /* Bỏ viền */
+  cursor: pointer;              /* Biến con trỏ thành dạng tay khi hover */
+}
+
+/* ===== HIỆU ỨNG HOVER CHO MENU CHÍNH ===== */
+.topnav a:hover,
+.topnav .dropbtn:hover {
+  color: #f05123;                  /* Màu chữ khi hover */
+  background-color: #ffffff;     /* Tô nền xanh */
+  padding: 9px 10px;              /* Khoảng cách trong nút */
+}
+
+
+/* ===== KHỐI DROPDOWN (ví dụ: CHIÊU SINH) ===== */
+.topnav .dropdown {
+  float: left;                  /* Căn trái giống các mục khác */
+  overflow: visible;            /* Cho dropdown hiện đầy đủ */
+  position: relative;           /* Làm gốc định vị cho dropdown-content */
+}
+
+/* ===== NỘI DUNG DROPDOWN (ẩn mặc định) ===== */
+.topnav .dropdown-content {
+  display: none;                /* Ẩn ban đầu */
+  flex-direction: column !important; /* Sắp xếp mục con theo chiều dọc */
+  position: absolute;           /* Định vị tuyệt đối theo .dropdown */
+  top: 100%;                    /* Đặt ngay dưới menu chính */
+  left: 0;                      /* Căn trái */
+  background-color: #ffffff;    /* Nền trắng cho menu con */
+  min-width: 160px;             /* Chiều rộng tối thiểu */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  z-index: 999;                 /* Hiển thị nổi bật */
+}
+
+/* ===== MỤC TRONG DROPDOWN ===== */
+.topnav .dropdown-content a {
+  display: block;               /* Mỗi mục chiếm nguyên 1 dòng */
+  padding: 10px 16px;           /* Khoảng cách trong mục */
+  color: #f05123;                  /* Màu chữ đen */
+  text-decoration: none;        /* Bỏ gạch chân */
+  font-size: 14px;              /* Cỡ chữ nhỏ hơn menu chính */
+  text-align: left;             /* Căn trái nội dung */
+  white-space: nowrap;          /* Không cho xuống dòng nếu quá dài */
+}
+
+/* ===== HIỆU ỨNG HOVER CHO MỤC CON ===== */
+.topnav .dropdown-content a:hover {
+  background-color: #f05123;    /* Đổi nền thành xanh dương khi hover */
+  color: white;                 /* Đổi màu chữ thành trắng */
+}
+
+/* ===== HIỂN THỊ DROPDOWN KHI HOVER MENU CHÍNH ===== */
+.topnav .dropdown:hover .dropdown-content {
+  display: flex !important;     /* Hiện menu con, sắp xếp theo chiều dọc */
+}
+
+/* ===== BIỂU TƯỢNG MENU MOBILE (HAMBURGER ICON) ===== */
+.topnav .icon {
+  display: none;                /* Ẩn biểu tượng trên màn hình lớn */
+}
+
+/* ===== RESPONSIVE MENU (CHO MÀN HÌNH NHỎ) ===== */
+@media screen and (max-width: 924px) {
+  .topnav a:not(:first-child),
+  .topnav .dropdown {
+    display: none;              /* Ẩn các mục menu trừ biểu tượng */
+  }
+
+  .topnav a.icon {
+    float: right;               /* Căn phải biểu tượng */
+    display: block;             /* Hiển thị icon */
+  }
+
+  .topnav.responsive {
+    position: relative;         /* Cho phép định vị lại */
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;         /* Định vị icon */
+    right: 0;                   /* Gắn vào góc phải */
+    top: 0;                     /* Gắn vào đỉnh */
+  }
+
+  .topnav.responsive a,
+  .topnav.responsive .dropdown {
+    float: none;                /* Bỏ float để xếp dọc */
+    display: block;             /* Hiển thị dạng khối */
+    text-align: left;           /* Căn trái toàn bộ */
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;         /* Không cần định vị tuyệt đối trong mobile */
+  }
+}

@@ -1,0 +1,89 @@
+/* ======= 1. PHẦN CHÍNH CỦA TRANG ======= */
+main {
+    width: 100%;                 /* Chiều rộng toàn trang */
+    margin: 5px 0;               /* Lề trên và dưới */
+    min-height: 100px;           /* Chiều cao tối thiểu */
+}
+/* Các phần tử con trực tiếp trong main */
+main > div {
+    margin: 10px 10%;            /* Cách đều lề trái/phải 10% */
+}
+
+/* ======== 2. KHỐI MỤC LỤC ======= */
+/* Khối bao ngoài cho mục lục */
+.phan-wrapper {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 350px;
+    font-family: "Segoe UI", sans-serif;
+}
+/* Tiêu đề mục lục */
+.phan-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1f2937;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 6px;
+}
+/* Danh sách mục lục */
+#bangTomTat {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+#bangTomTat li {
+    margin-bottom: 8px;
+}
+/* Liên kết trong mục lục */
+#bangTomTat .tomtat {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #374151;
+    background-color: #ffffff;
+    position: relative;
+    font-size: 15px;
+}
+/* Hiệu ứng hover cho liên kết */
+#bangTomTat .tomtat:hover {
+    background-color: #f05123;
+    color: #fff;
+}
+
+/* ======== 3. DANH SÁCH TÓM TẮT NỘI DUNG ======= */
+main #bangTomTat {
+    list-style: none;           /* Bỏ dấu đầu dòng */
+    padding-left: 0;            /* Bỏ khoảng cách trái */
+}
+main #bangTomTat .tomtat {
+    display: block;             /* Mỗi mục một dòng */
+    color: black;               /* Màu chữ mặc định */
+    text-decoration: none;      /* Bỏ gạch chân */
+    padding: 2px 0;             /* Khoảng cách trên dưới */
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+main #bangTomTat .tomtat:hover {
+    color: #ffffff;             /* Màu khi hover */
+}
+
+/* ======== 4. NÚT QUAY VỀ ĐẦU TRANG (Vuông bo góc) ======= */
+#backToTop {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    background-color: #005ad0;
+    padding: 10px 15px;
+    border-radius: 8px; /* Bo góc nhẹ */
+}
+
+#backToTop a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}

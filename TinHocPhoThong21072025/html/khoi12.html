@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin học Khối 12</title>
+  <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/trangchu.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/topnav.css" />
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/trangchu.js" defer></script>
+  <script src="../js/taikhoan.js" defer></script>
+  <script src="../js/responsive.js" defer></script>
+</head>
+<body>
+  <!-- Banner -->
+  <div class="banner-top" style="position: relative;">
+    <a href="trangchu.html" class="banner reloadTrang">
+      <img src="../img/banner.png" alt="Banner Tin học phổ thông" style="width: 100%;" />
+    </a>
+    <div class="header-right" style="position: absolute; bottom: 10px; right: 20px; z-index: 2;">
+      <div class="dropdown" id="dkdn">
+        <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="dangky.html">Đăng ký</a>
+          <a href="dangnhap.html">Đăng nhập</a>
+        </div>
+      </div>
+      <div id="divTaikhoan" class="dropdown" style="display: none;">
+        <button id="taikhoan" class="dropbtn"></button>
+        <div class="dropdown-content" id="ttTaikhoan">
+          <ul id="info">
+            <li><b>Tên đăng nhập:</b> <span id="tenDangnhap"></span></li>
+            <li><b>Mật khẩu:</b> <span id="matkhau"></span> <span id="passEye"><img width="22" src="../img/closePassEye.png" alt="Ẩn/hiện mật khẩu" /></span></li>
+            <li><b>Họ và tên:</b> <span id="hoten"></span></li>
+            <li><b>Số điện thoại:</b> <span id="sdt"></span></li>
+          </ul>
+          <div>
+            <button type="button" id="doiMK">Đổi mật khẩu</button>
+            <button type="button" id="dangXuat">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Menu điều hướng chính === -->
+  <div class="menu-container">
+    <nav class="topnav" id="myTopnav">
+      <a href="trangchu.html">TRANG CHỦ</a>
+      <a href="gioithieu.html">GIỚI THIỆU</a>
+
+      <!-- Dropdown: Chiêu sinh -->
+      <div class="dropdown">
+        <button class="dropbtn">CHIÊU SINH</button>
+        <div class="dropdown-content">
+          <a href="khoi10.html">Khối 10</a>
+          <a href="khoi11.html">Khối 11</a>
+          <a href="khoi12.html">Khối 12</a>
+        </div>
+      </div>
+
+      <a href="elearning.html">E-LEARNING</a>
+
+      <a href="lienhe.html">LIÊN HỆ</a>
+
+      <!-- Biểu tượng menu mobile -->
+      <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <div class="container">    
+      <br>
+      <div class="description-catalog">
+        <div class="title-desc-catalog">
+          <h2>Chương trình Tin học Khối 12</h2>
+        </div>
+        <div class="content-desc-catalog">
+          <p>Khối 12 nhấn mạnh kỹ năng phân tích và thiết kế thuật toán, rèn luyện ứng dụng và bài tập lớn chuẩn bị cho thi tốt nghiệp.</p>
+          <p>Học sinh được trang bị đầy đủ kỹ năng và kiến thức cho giai đoạn cuối THPT.</p>
+        </div>
+      </div>
+
+      <div class="phan-wrapper">
+        <div class="phan-header">Nội dung học</div>
+        <ul id="bangTomTat">
+          <li><a class="tomtat" href="#chuong1">1. Phân tích và thiết kế thuật toán</a></li>
+          <li><a class="tomtat" href="#chuong2">2. Đề tài lớn</a></li>
+          <li><a class="tomtat" href="#chuong3">3. Hệ thống và báo cáo</a></li>
+          <li><a class="tomtat" href="#chuong4">4. Ứng dụng thực tiễn</a></li>
+          <li><a class="tomtat" href="#chuong5">5. Ôn tập và thi thử</a></li>
+        </ul>
+      </div>
+
+      <div id="chuong1"><h2>1. Phân tích và thiết kế thuật toán</h2><p>Hướng dẫn phân tích yêu cầu bài toán và thiết kế giải thuật trên mô hình.</p></div>
+      <div id="chuong2"><h2>2. Đề tài lớn</h2><p>Triển khai đề tài lớn với đủ bước phân tích, thiết kế, cài đặt và kiểm tra.</p></div>
+      <div id="chuong3"><h2>3. Hệ thống và báo cáo</h2><p>Lên báo cáo kỹ thuật, thiết kế giao diện người dùng và xuất báo cáo.</p></div>
+      <div id="chuong4"><h2>4. Ứng dụng thực tiễn</h2><p>Tổng hợp các kiến thức qua các ứng dụng giả lập thực tiễn trong các lĩnh vực.</p></div>
+      <div id="chuong5"><h2>5. Ôn tập và thi thử</h2><p>Luyện tập qua đề thi thử, ôn tập trực tuyến và thi thử để chuẩn bị thi tốt nghiệp.</p></div>
+    </div>
+  </main>
+
+  <!-- Back to top -->
+  <div id="backToTop"><a href="#top">⬆</a></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <ul>
+          <span>Thông tin về</span>
+          <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+          <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <span>Tài khoản</span>
+          <li><a href="#">Tài khoản của tôi</a></li>
+          <li><a href="dangnhap.html">Đăng nhập</a></li>
+          <li><a href="dangky.html">Đăng ký</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <span>Hỗ trợ</span>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Quy định sử dụng</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <span>Liên hệ</span>
+          <li>Website: <a href="https://hoctinonline.vn" target="_blank">HocTinOnline.vn</a></li>
+          <li>Địa chỉ: Tỉnh An Giang, Việt Nam</li>
+          <li>Email: <a href="mailto:nvdinhm1@gmail.com.vn">nvdinhm1@gmail.com.vn</a></li>
+          <li>Hotline: 0825 701 543</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-info" style="text-align: center; padding-top: 2px;">
+      <p>&copy; 2025 <strong><a href="trangchu.html" style="text-decoration: none; color: inherit;">HocTinOnline.vn</a></strong> – Website dạy và học Tin học phổ thông.</p>
+    </div>
+  </footer>
+</body>
+</html>

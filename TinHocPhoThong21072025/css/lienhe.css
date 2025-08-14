@@ -1,0 +1,323 @@
+/* ===============================
+   1. KHUNG TỔNG VÀ BỐ CỤC
+=================================*/
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===============================
+   2. BÊN TRÁI: ẢNH + THÔNG TIN
+=================================*/
+.left-section {
+  background: linear-gradient(135deg, #f05123, #f0bd23);
+  color: #fff;
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  text-align: center;
+}
+
+.left-section h2 {
+  color: #007bff;
+  text-shadow:
+    -0.4px -0.4px 0 #fff,
+     0.4px -0.4px 0 #fff,
+    -0.4px  0.4px 0 #fff,
+     0.4px  0.4px 0 #fff;
+}
+
+
+.contact-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.role {
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.quote {
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* Mạng xã hội */
+.social-links {
+  margin: 20px 0;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #fff;
+  font-size: 25px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: yellow;
+}
+
+/* QR code */
+.qr-contact {
+  margin-top: 15px;
+}
+
+.qr-contact img {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.qr-contact p {
+  margin-top: 5px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* ===============================
+   3. BÊN PHẢI: THÔNG TIN + FORM
+=================================*/
+.right-section {
+  flex: 2;
+  padding: 30px;
+}
+
+
+.info-block,
+.contact-form {
+  background: #fdfdfd;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.151);
+  margin-top: 1px;
+  font-size: 16px;
+}
+
+.info-block h3,
+.contact-form h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #f05123;
+  border-bottom: 2px solid #f04f2347;
+  padding-bottom: 5px;
+}
+
+/* Thông tin liên hệ */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item .icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #007bff, #00c4ff);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.info-item a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info-item a:hover {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Trạng thái online/offline */
+.status {
+  margin-top: 12px;
+  font-weight: bold;
+}
+.status.online {
+  color: #28a745;
+}
+.status.offline {
+  color: #dc3545;
+}
+
+/* ===============================
+   4. FORM GỬI TIN NHẮN
+=================================*/
+.contact-form {
+  margin-top: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+label::after {
+  content: " *";
+  color: #f05123;
+}
+
+.required {
+  color: #f05123;
+  font-weight: bold;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+p small {
+  color: #555;
+  font-style: italic;
+}
+
+
+/* Nút bên phải */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Style chung cho nút */
+button#sendBtn,
+button#resetBtn {
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Nút gửi */
+button#sendBtn {
+  background: linear-gradient(135deg, #007bff, #00c4ff);
+}
+button#sendBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0056b3, #008bbf);
+}
+
+/* Nút reset */
+button#resetBtn {
+  background: linear-gradient(135deg, #f05123, #ff7b50);
+}
+button#resetBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #dc3545, #ff4b5c);
+}
+
+/* ===============================
+   6. FONT
+=================================*/
+input, textarea {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+
+/* ===============================
+   5. RESPONSIVE
+=================================*/
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .left-section, 
+  .right-section {
+    flex: 1;
+    width: 100%;
+    min-width: unset;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .contact-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .qr-contact img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .quick-actions a {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .input-group span {
+    margin-bottom: 5px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+}
+
+

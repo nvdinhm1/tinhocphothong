@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin học Khối 11</title>
+  <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/trangchu.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/topnav.css" />
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/trangchu.js" defer></script>
+  <script src="../js/taikhoan.js" defer></script>
+  <script src="../js/responsive.js" defer></script>
+</head>
+<body>
+  <!-- Banner -->
+  <div class="banner-top" style="position: relative;">
+    <a href="trangchu.html" class="banner reloadTrang">
+      <img src="../img/banner.png" alt="Banner Tin học phổ thông" style="width: 100%;" />
+    </a>
+    <div class="header-right" style="position: absolute; bottom: 10px; right: 20px; z-index: 2;">
+      <div class="dropdown" id="dkdn">
+        <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="dangky.html">Đăng ký</a>
+          <a href="dangnhap.html">Đăng nhập</a>
+        </div>
+      </div>
+      <div id="divTaikhoan" class="dropdown" style="display: none;">
+        <button id="taikhoan" class="dropbtn"></button>
+        <div class="dropdown-content" id="ttTaikhoan">
+          <ul id="info">
+            <li><b>Tên đăng nhập:</b> <span id="tenDangnhap"></span></li>
+            <li><b>Mật khẩu:</b> <span id="matkhau"></span> <span id="passEye"><img width="22" src="../img/closePassEye.png" alt="Ẩn/hiện mật khẩu" /></span></li>
+            <li><b>Họ và tên:</b> <span id="hoten"></span></li>
+            <li><b>Số điện thoại:</b> <span id="sdt"></span></li>
+          </ul>
+          <div>
+            <button type="button" id="doiMK">Đổi mật khẩu</button>
+            <button type="button" id="dangXuat">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Menu điều hướng chính === -->
+  <div class="menu-container">
+    <nav class="topnav" id="myTopnav">
+      <a href="trangchu.html">TRANG CHỦ</a>
+      <a href="gioithieu.html">GIỚI THIỆU</a>
+
+      <!-- Dropdown: Chiêu sinh -->
+      <div class="dropdown">
+        <button class="dropbtn">CHIÊU SINH</button>
+        <div class="dropdown-content">
+          <a href="khoi10.html">Khối 10</a>
+          <a href="khoi11.html">Khối 11</a>
+          <a href="khoi12.html">Khối 12</a>
+        </div>
+      </div>
+
+      <a href="elearning.html">E-LEARNING</a>
+
+      <a href="lienhe.html">LIÊN HỆ</a>
+
+      <!-- Biểu tượng menu mobile -->
+      <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <br>
+      <div class="description-catalog">
+        <div class="title-desc-catalog">
+          <h2>Chương trình Tin học Khối 11</h2>
+        </div>
+        <div class="content-desc-catalog">
+          <p>Khối 11 tập trung phát triển tư duy lập trình nâng cao, cấu trúc dữ liệu và làm quen các thuật toán cơ bản.</p>
+          <p>Học sinh được tiếp cận các bài tập ứng dụng thực tế để củng cố kiến thức.</p>
+        </div>
+      </div>
+
+      <div class="phan-wrapper">
+        <div class="phan-header">Nội dung học</div>
+        <ul id="bangTomTat">
+          <li><a class="tomtat" href="#chuong1">1. Giới thiệu lập trình nâng cao</a></li>
+          <li><a class="tomtat" href="#chuong2">2. Cấu trúc dữ liệu</a></li>
+          <li><a class="tomtat" href="#chuong3">3. Thuật toán sắp xếp</a></li>
+          <li><a class="tomtat" href="#chuong4">4. Xử lý tập tin</a></li>
+          <li><a class="tomtat" href="#chuong5">5. Dự án thực hành</a></li>
+        </ul>
+      </div>
+
+      <div id="chuong1"><h2>1. Giới thiệu lập trình nâng cao</h2><p>Làm quen với tư duy hướng đối tượng, module và cấu trúc chương trình phức tạp hơn.</p></div>
+      <div id="chuong2"><h2>2. Cấu trúc dữ liệu</h2><p>Khái niệm danh sách, mảng, xâu ký tự và cách lưu trữ, xử lý trong lập trình.</p></div>
+      <div id="chuong3"><h2>3. Thuật toán sắp xếp</h2><p>Học các thuật toán sắp xếp cơ bản như Bubble Sort, Selection Sort và ứng dụng.</p></div>
+      <div id="chuong4"><h2>4. Xử lý tập tin</h2><p>Đọc/ghi dữ liệu từ tập tin văn bản, thao tác mở/đóng file, xử lý dòng dữ liệu.</p></div>
+      <div id="chuong5"><h2>5. Dự án thực hành</h2><p>Học sinh làm bài tập lớn hoặc dự án nhỏ, áp dụng toàn bộ kiến thức đã học.</p></div>
+    </div>
+  </main>
+
+  <!-- Back to top -->
+  <div id="backToTop"><a href="#top">⬆</a></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <ul>
+          <span>Thông tin về</span>
+          <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+          <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <span>Tài khoản</span>
+          <li><a href="#">Tài khoản của tôi</a></li>
+          <li><a href="dangnhap.html">Đăng nhập</a></li>
+          <li><a href="dangky.html">Đăng ký</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <span>Hỗ trợ</span>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Quy định sử dụng</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <span>Liên hệ</span>
+          <li>Website: <a href="https://hoctinonline.vn" target="_blank">HocTinOnline.vn</a></li>
+          <li>Địa chỉ: Tỉnh An Giang, Việt Nam</li>
+          <li>Email: <a href="mailto:nvdinhm1@gmail.com.vn">nvdinhm1@gmail.com.vn</a></li>
+          <li>Hotline: 0825 701 543</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-info" style="text-align: center; padding-top: 2px;">
+      <p>&copy; 2025 <strong><a href="trangchu.html" style="text-decoration: none; color: inherit;">HocTinOnline.vn</a></strong> – Website dạy và học Tin học phổ thông.</p>
+    </div>
+  </footer>
+</body>
+</html>

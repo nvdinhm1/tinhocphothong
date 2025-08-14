@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <!-- === Cấu hình cơ bản của trang === -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>E-Learning</title>
+  <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon" />
+
+  <!-- === Thư viện bên ngoài === -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--elearning-->
+
+  <!-- === Tệp CSS nội bộ === -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/trangchu.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/topnav.css" />
+  <link rel="stylesheet" href="../css/elearning.css" />
+
+  <!-- === Thư viện và mã JavaScript === -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/trangchu.js" defer></script>
+  <script src="../js/taikhoan.js" defer></script>
+  <script src="../js/responsive.js" defer></script>
+</head>
+
+<body>
+  <!-- === Banner đầu trang === -->
+  <div class="banner-top" style="position: relative;">
+    <a href="trangchu.html" class="banner reloadTrang">
+      <img src="../img/banner.png" alt="Banner Tin học phổ thông" style="width: 100%;" />
+    </a>
+
+    <!-- === Khu vực tài khoản (góc phải) === -->
+    <div class="header-right" style="position: absolute; bottom: 10px; right: 20px; z-index: 2;">
+      <!-- Chưa đăng nhập -->
+      <div class="dropdown" id="dkdn">
+        <button class="dropbtn" onclick="toggle_dropdown()">
+          Tài khoản <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="dangky.html">Đăng ký</a>
+          <a href="dangnhap.html">Đăng nhập</a>
+        </div>
+      </div>
+
+      <!-- Đã đăng nhập -->
+      <div id="divTaikhoan" class="dropdown" style="display: none;">
+        <button id="taikhoan" class="dropbtn"></button>
+        <div class="dropdown-content" id="ttTaikhoan">
+          <ul id="info">
+            <li><b>Tên đăng nhập:</b> <span id="tenDangnhap"></span></li>
+            <li>
+              <b>Mật khẩu:</b> <span id="matkhau"></span>
+              <span id="passEye">
+                <img width="22" src="../img/closePassEye.png" alt="Ẩn/hiện mật khẩu" />
+              </span>
+            </li>
+            <li><b>Họ và tên:</b> <span id="hoten"></span></li>
+            <li><b>Số điện thoại:</b> <span id="sdt"></span></li>
+          </ul>
+          <div>
+            <button type="button" id="doiMK">Đổi mật khẩu</button>
+            <button type="button" id="dangXuat">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Menu điều hướng chính === -->
+  <div class="menu-container">
+    <nav class="topnav" id="myTopnav">
+      <a href="trangchu.html">TRANG CHỦ</a>
+      <a href="gioithieu.html">GIỚI THIỆU</a>
+
+      <!-- Dropdown: Chiêu sinh -->
+      <div class="dropdown">
+        <button class="dropbtn">CHIÊU SINH</button>
+        <div class="dropdown-content">
+          <a href="khoi10.html">Khối 10</a>
+          <a href="khoi11.html">Khối 11</a>
+          <a href="khoi12.html">Khối 12</a>
+        </div>
+      </div>
+
+      <a href="elearning.html">E-LEARNING</a>
+
+      <a href="lienhe.html">LIÊN HỆ</a>
+
+      <!-- Biểu tượng menu mobile -->
+      <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </div>
+
+  <!-- === Nội dung chính === -->
+<main>
+  <div class="container">     
+    <br>
+    <!-- Mục lục nhanh (tóm tắt nội dung) -->
+    <div class="phan-wrapper">
+      <div class="phan-header">Mục lục</div>
+      <ul id="bangTomTat">
+        <li><a class="tomtat" href="#phan-1">1. Giới thiệu về hệ thống e-Learning</a></li>
+        <li><a class="tomtat" href="#phan-2">2. Lợi ích khi sử dụng hệ thống e-Learning</a></li>
+        <li><a class="tomtat" href="#phan-3">3. Hướng dẫn sử dụng hệ thống e-Learning</a></li>
+      </ul>
+    </div>
+
+    <!-- === Các phần nội dung === -->
+    <div id="phan-1" class="phan-1">
+      <h1>1. Giới thiệu về hệ thống e-Learning</h1>
+      <p>
+        Trong bối cảnh giáo dục hiện đại, sự phát triển mạnh mẽ của CNTT và truyền thông (ICT) đã mang đến những cơ hội cho hệ thống giáo dục toàn cầu. Một trong những xu hướng nổi bật là ứng dụng ICT trong dạy và học thông qua hình thức hệ thống e-Learning. Hệ thống e-Learning là một mô hình giáo dục dựa trên CNTT và Internet, cho phép cung cấp tài liệu học tập, tổ chức khóa học, đồng thời hỗ trợ tương tác hiệu quả giữa người dạy và người học.
+      </p>
+      <p>
+        Hiện nay, hệ thống e-Learning được hiểu theo nhiều cách khác nhau tùy thuộc vào bối cảnh và cách tiếp cận. Hiểu theo nghĩa hẹp thì hệ thống e-Learning là một hình thức tổ chức các buổi đào tạo qua các phương tiện CNTT và truyền thông mà ở đó có sự tương tác theo thời gian thực giữa người dạy và người học. Theo PGS.TS. Lê Huy Hoàng, “Hệ thống e-Learning là một loại hình đào tạo chính quy hay không chính quy, hướng tới thực hiện tốt mục tiêu học tập, trong đó có sự tương tác trực tiếp giữa người dạy với người học cũng như giữa cộng đồng học tập một cách thuận lợi thông qua CNTT và truyền thông.”
+      </p>
+      <p>
+        Theo nghĩa rộng, hệ thống e-Learning là một thuật ngữ mô tả hoạt động học tập và đào tạo dựa trên CNTT và truyền thông, đặc biệt là mạng Internet. Theo quan điểm hiện đại, hệ thống e-Learning là quá trình phân phối nội dung học tập thông qua các công cụ điện tử như máy tính và mạng Internet. Trên nền tảng này, người dạy và người học có thể giao tiếp với nhau bằng nhiều hình thức khác nhau như: email, thảo luận trực tuyến (chat), diễn đàn (forum), hội thảo video,...
+      </p>
+      <p>
+        Song song với đó, Luskin et al. đã mở rộng cách hiểu về chữ “E” trong hệ thống e-Learning, cho rằng nó mang ý nghĩa là “exciting, energetic, enthusiastic, emotional, extended, excellent và educational”. Điều này nhấn mạnh rằng hệ thống e-Learning không chỉ đơn thuần là ứng dụng công nghệ vào học tập mà còn tạo ra một quá trình học tập thú vị, năng động, giàu cảm xúc, mở rộng kiến thức, hiệu quả và mang tính giáo dục cao.
+      </p>
+      <p>
+        Trong môi trường giáo dục hiện đại, hệ thống e-Learning đã trở thành xu hướng tất yếu nhờ sự phát triển mạnh mẽ của CNTT và truyền thông. Hệ thống e-Learning không chỉ đáp ứng nhu cầu học tập linh hoạt mà còn mở ra những phương thức học tập mới, đa dạng và phù hợp với nhiều đối tượng người học. Tùy vào mục đích và điều kiện triển khai, hệ thống e-Learning có thể được chia thành 02 hình thức chính: Học tập trực tuyến (Online Learning) và học tập hỗn hợp (Blended Learning).
+      </p>
+      <p>
+        - Học tập trực tuyến (Online Learning): Hình thức học tập được thực hiện hoàn toàn trên LMS. Hình thức này được chia thành 02 cách tiếp cận chính:
+      </p>
+      <p>
+        + Dạy học đồng bộ (Synchronous Learning): Người dạy và người học tham gia cùng thời điểm trên hệ thống LMS và trao đổi thông tin trực tiếp với nhau thông qua các công cụ như thảo luận trực tuyến (chat), hội thảo video, phát sóng trực tiếp,... Hình thức này tạo ra môi trường học tập sinh động, trực quan và tăng cường tương tác thời gian thực giữa các bên.
+      </p>
+      <p>
+        + Dạy học không đồng bộ (Asynchronous Learning): Người dạy và người học không cần tham gia cùng thời điểm trên hệ thống LMS, thay vào đó người học có thể truy cập các khóa học tự học, tài liệu học tập qua Internet, email hoặc diễn đàn theo thời gian linh hoạt. Hình thức này tạo sự chủ động tối đa cho người học, cho phép họ sắp xếp thời gian học tập phù hợp với bản thân. Đặc trưng của phương pháp này là GV cần chuẩn bị tài liệu khóa học trước khi triển khai, còn người học được tự do chọn thời gian tham gia khóa học.
+      </p>
+      <p>
+        - Học tập hỗn hợp (Blended Learning): Hình thức kết hợp giữa học tập trực tuyến và dạy học trực tiếp (face-to-face). Trong hình thức này, hệ thống e-Learning chỉ tập trung vào các nội dung học tập phù hợp để triển khai trực tuyến thông qua hệ thống LMS. Các nội dung còn lại được thực hiện thông qua hình thức dạy học trực tiếp nhằm khai thác tối đa ưu điểm của từng phương pháp. Mô hình học tập hỗn hợp hiện đang được sử dụng rộng rãi tại nhiều trường đại học trên thế giới bao gồm cả các nước có nền giáo dục phát triển. Hình thức này vừa đảm bảo sự linh hoạt trong học tập nhờ công nghệ số, vừa duy trì sự tương tác cần thiết giữa người dạy và người học, qua đó nâng cao chất lượng giáo dục.
+      </p>
+    </div>
+
+    <div id="phan-2" class="phan-2">
+      <h1>2. Lợi ích khi sử dụng hệ thống e-Learning</h1>
+
+      <p>
+        Hệ thống e-Learning mang lại nhiều lợi ích vượt trội trong giáo dục và đào tạo, được minh chứng qua các khía cạnh sau đây:
+      </p>  
+      <p>
+        - Tạo môi trường học tập mở và tái sử dụng các đối tượng học tập: 
+        Hệ thống e-Learning giúp xây dựng một hệ sinh thái học tập linh hoạt, nơi người học có thể tiếp cận và tái sử dụng các tài nguyên học tập theo nhu cầu cá nhân.
+      </p>
+      <p>
+        - Tiếp cận bài giảng dễ dàng và nâng cao hiệu quả học tập: 
+        Với sự hỗ trợ của công nghệ hiện đại, hệ thống e-Learning tạo điều kiện để người học tiếp cận bài giảng ở bất kỳ đâu, bất kỳ lúc nào, từ đó làm tăng hiệu quả của quá trình dạy và học.
+      </p>
+      <p>
+        - Tiết kiệm chi phí và thời gian: 
+        So với phương pháp giảng dạy truyền thống, hệ thống e-Learning giúp giảm đáng kể chi phí đào tạo như đi lại, in ấn tài liệu, cơ sở vật chất, đồng thời tối ưu hóa thời gian học tập.
+      </p>
+      <p>
+        - Tăng tính tương tác và cá nhân hóa việc học tập: 
+        Hệ thống e-Learning cho phép người học trao đổi thông tin một cách dễ dàng thông qua các công cụ trực tuyến như diễn đàn, email hoặc trò chuyện trực tiếp. 
+        Đồng thời, người học có thể cá nhân hóa nội dung học tập theo tốc độ và nhu cầu của mình.
+      </p>
+      <p>
+        - Mở rộng cơ hội tiếp cận tài liệu và thông tin: 
+        Người học có thể dễ dàng truy cập vào nguồn tài liệu phong phú, đa dạng, bao gồm các tài liệu TNGDM và tài nguyên đa phương tiện.
+      </p>
+      <p>
+        - Chia sẻ thông tin dễ dàng: 
+        Hệ thống e-Learning tạo điều kiện thuận lợi để thông tin được chia sẻ giữa người dạy, người học và cộng đồng, góp phần xây dựng môi trường học tập cộng tác.
+      </p>
+      <p>
+        - Thân thiện với môi trường: 
+        Việc học trực tuyến góp phần giảm thiểu tác động tiêu cực đến môi trường thông qua việc hạn chế di chuyển, giảm sử dụng sách in và tài liệu giấy.
+      </p>
+    </div>
+
+
+    <div id="phan-3" class="phan-3">
+      <h1>3. Hướng dẫn sử dụng hệ thống e-Learning</h1>
+
+      <p>
+        Để sử dụng hệ thống e-Learning (LMS), người học cần thực hiện đầy đủ các bước theo thứ tự nhằm đảm bảo quá trình học tập và làm bài kiểm tra diễn ra thuận lợi, hiệu quả.
+        
+        <br><strong>1. Đăng nhập vào hệ thống</strong>
+        <br>- Truy cập vào địa chỉ: <b><a href="https://elearning.oer.edu.vn" target="_blank" rel="noopener noreferrer">https://elearning.oer.edu.vn</a></b>.
+        <br>- Sử dụng tên đăng nhập là mã số sinh viên và mật khẩu do Ban Tổ chức cung cấp.
+        <br>- Nhấn nút <em>Log in</em> để vào hệ thống.
+
+        <br><strong>2. Truy cập và ghi danh vào khóa học</strong>
+        <br>- Sau khi đăng nhập thành công, chọn khóa học tương ứng từ danh sách hiển thị.
+        <br>- Nhấn <em>Enroll me</em> để ghi danh vào khóa học.
+        <br>- Sau khi ghi danh thành công, người học có thể truy cập các mục như Thông tin chung, Hướng dẫn làm bài,...
+        
+
+        <br><strong>3. Truy cập vào đề thi</strong>
+        <br>- Vào khóa học và chọn mục "Đề thi thử" hoặc "Đề thi chính thức".
+        <br>- Nhấn <em>Attempts quiz</em> để bắt đầu làm bài.
+        <br>- Nếu có yêu cầu, nhập mật khẩu đề thi và đồng ý với điều khoản giám sát.
+        <br>- Trong quá trình làm bài, người học có thể sử dụng thanh điều hướng câu hỏi, đánh dấu những câu chưa chắc chắn, và theo dõi thời gian còn lại.
+        <br>- Sau khi hoàn tất, nhấn <em>Finish attempt</em> để nộp bài. Hệ thống sẽ hiển thị điểm ngay sau khi nộp.
+        
+        <br><strong>4. Đăng xuất tài khoản</strong>
+        <br>- Nhấn vào ảnh đại diện hoặc tên người dùng ở góc trên phải.
+        <br>- Chọn <em>Log out</em> để đăng xuất khỏi hệ thống.
+        <br>- Nhấn vào ảnh đại diện hoặc tên người dùng ở góc trên phải.
+        <br>- Chọn <em>Log out</em> để đăng xuất khỏi hệ thống.
+
+        <br><strong>5. Lưu ý khi làm bài kiểm tra</strong>
+        <br>- Hệ thống e-Learning có thể kích hoạt tính năng giám sát trong suốt thời gian làm bài nhằm đảm bảo tính nghiêm túc.
+        <br>- Các hành vi như chuyển tab, rời khỏi màn hình hoặc sử dụng tài liệu không cho phép có thể bị phát hiện và dẫn đến hủy bài.
+        <br>- Một số bài kiểm tra có thể yêu cầu bật camera hoặc chia sẻ màn hình để giám sát, tuy nhiên không áp dụng với tất cả kỳ thi.
+      </p>
+
+      <!-- Nút tải xuống -->
+      <div class="download-btn">
+        <a href="../downloads/TLHD.pdf" download>
+          <i class="fa-solid fa-cloud-arrow-down"></i> 
+          Tải tài liệu hướng dẫn (PDF)
+        </a>
+      </div>
+      <br>
+      <!-- Khung xem PDF hiện đại -->
+      <div class="pdf-container">
+        <iframe
+          src="../downloads/TLHD.pdf"
+          title="Tài liệu hướng dẫn e-Learning"
+          class="pdf-viewer">
+        </iframe>
+      </div>
+      <br>  
+
+    </div>
+
+  </div>
+</main>
+
+
+  <!-- === Nút trở về đầu trang === -->
+  <div id="backToTop">
+    <a href="#top">⬆</a>
+  </div>
+
+  <!-- === Chân trang (footer) === -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <ul>
+          <span>Thông tin về</span>
+          <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+          <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Tài khoản</span>
+          <li><a href="#">Tài khoản của tôi</a></li>
+          <li><a href="dangnhap.html">Đăng nhập</a></li>
+          <li><a href="dangky.html">Đăng ký</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Hỗ trợ</span>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Quy định sử dụng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Liên hệ</span>
+          <li>Website: <a href="https://hoctinonline.vn" target="_blank" rel="noopener noreferrer">HocTinOnline.vn</a></li>
+          <li>Địa chỉ: Tỉnh An Giang, Việt Nam</li>
+          <li>Email: <a href="mailto:nvdinhm1@gmail.com.vn">nvdinhm1@gmail.com.vn</a></li>
+          <li>Hotline: 0825 701 543</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Thông tin bản quyền -->
+    <div class="footer-info" style="text-align: center; padding-top: 2px;">
+      <p>&copy; 2025 <strong><a href="trangchu.html" style="text-decoration: none; color: inherit;">HocTinOnline.vn</a></strong> – Website dạy và học Tin học phổ thông.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

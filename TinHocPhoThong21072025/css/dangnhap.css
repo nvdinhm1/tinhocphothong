@@ -1,0 +1,130 @@
+/* === Phần chính của trang === */
+main {
+    width: 100%;                 /* Phần chính chiếm toàn bộ chiều rộng */
+    margin: 5px 0;               /* Cách lề trên và dưới mỗi 5px */
+    min-height: 100px;           /* Chiều cao tối thiểu là 100px */
+}
+
+main > div {
+    margin: 10px 10%;            /* Cách lề trên là 10px, trái/phải mỗi bên là 10% */
+}
+/* ==== Căn giữa form trên màn hình ==== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* ==== Form đăng nhập ==== */
+.register-form {
+  background-color: #bdbebe;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #007bff;
+}
+
+/* ==== Ô input ==== */
+.input-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 1px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+.input-box input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* ==== Thông báo lỗi ==== */
+.input-box span {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ==== Nút đăng nhập ==== */
+.btn-box {
+  text-align: center;
+}
+
+.btn-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-box button:hover {
+  background-color: #0056b3;
+}
+
+
+/* === Nút quay về đầu trang === */
+#backToTop {
+    position: fixed;             /* Cố định vị trí trên trang */
+    right: 30px;                 /* Cách mép phải 30px */
+    bottom: 20px;                /* Cách mép dưới 20px */
+    background-color: #005ad0;   /* Màu nền xanh */
+    padding: 10px 15px;          /* Padding trong nút */
+    border-radius: 30px;         /* Bo tròn thành hình viên thuốc */
+    font-weight: bold;           /* Chữ đậm */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Đổ bóng nhẹ */
+}
+
+#backToTop a {
+    color: white;                /* Màu chữ trắng */
+    text-decoration: none;       /* Bỏ gạch chân */
+    font-size: 16px;             /* Kích thước chữ */
+}
+
+/* === Responsive === */
+@media (max-width: 688px) {
+    main .container {
+        width: 80%;              /* Trên màn hình nhỏ, container co lại 80% */
+    }
+}
+
+@media (max-width: 558px) {
+    main .row label {
+        width: 100%;             /* Label chiếm 100% chiều ngang */
+        text-align: left ;        /* Căn trái label */
+    }
+
+    main #gioitinh label:first-child {
+        margin-left: 0;          /* Bỏ khoảng cách trái */
+    }
+
+    main .row input {
+        width: 93%;              /* Input co lại vừa khung hơn */
+    }
+
+    main .row div {
+        margin-left: 0;          /* Không đẩy div sang trái nữa */
+    }
+}

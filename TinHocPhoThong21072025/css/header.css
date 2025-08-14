@@ -1,0 +1,163 @@
+/* ================================
+   VÙNG BANNER ĐẦU TRANG
+================================= */
+.banner-top {
+  position: relative;       /* Cho phép định vị các phần tử con tuyệt đối như .header-right */
+  width: 80%;               /* Chiếm 80% chiều rộng trang */
+  margin: 0 auto;           /* Căn giữa theo chiều ngang */
+  text-align: center;       /* Căn giữa nội dung bên trong */
+}
+
+.banner-top img {
+  width: 100%;              /* Ảnh chiếm toàn bộ chiều rộng banner */
+  height: auto;             /* Tự động tính chiều cao để giữ tỉ lệ */
+}
+
+
+
+/* ================================
+   NÚT TÀI KHOẢN GÓC PHẢI TRÊN
+================================= */
+.header-right {
+  position: absolute;
+  top: 10px;                /* Cách đỉnh 10px */
+  left: 950px;              /* Căn trái 950px (nên thay bằng right hoặc dùng flex để responsive tốt hơn) */
+  z-index: 2;               /* Ưu tiên hiển thị phía trên */
+}
+
+
+/* ================================
+   NÚT DROPDOWN TÀI KHOẢN
+================================= */
+.dropbtn {
+  background-color: #f05123; /* Nền xanh dương */
+  color: white;              /* Chữ màu trắng */
+  padding: 6px 10px;         /* Khoảng cách trong nút */
+  font-size: 14px;           /* Cỡ chữ */
+  border: none;              /* Không viền */
+  cursor: pointer;           /* Hiển thị con trỏ tay khi hover */
+}
+
+.dropbtn:hover {
+  background-color: #d7471f; /* Giữ nguyên nền */
+  
+}
+
+
+/* ================================
+   KHỐI DROPDOWN BÊN DƯỚI NÚT
+================================= */
+.dropdown {
+  position: relative;        /* Giúp dropdown-content định vị đúng */
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;             /* Mặc định ẩn */
+  position: absolute;
+  left: 0;                   /* Căn trái */
+  background-color: #f9f9f9; /* Nền dropdown màu xám nhạt */
+  min-width: 110px;          /* Chiều rộng tối thiểu */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+  z-index: 99;               /* Hiển thị trên các thành phần khác */
+  overflow: hidden;          /* Ẩn tràn */
+}
+
+.dropdown-content a {
+  color: black;              /* Chữ màu đen */
+  padding: 5px 10px;         /* Khoảng cách trong liên kết */
+  text-decoration: none;     /* Bỏ gạch chân */
+  display: block;            /* Hiển thị thành khối */
+  text-align: left;          /* Căn trái chữ */
+  font-size: 14px;           /* Kích thước chữ menu dropdown */
+  transition: background-color 0.3s; /* Hiệu ứng mượt khi hover */
+}
+
+.dropdown-content a:hover {
+  color: #ffffff;            /* Đổi chữ sang trắng */
+  background-color: #f05123; /* Nền xanh */
+}
+
+.show {
+  display: block;            /* Hiển thị dropdown khi thêm class này */
+}
+
+
+/* ================================
+   GIAO DIỆN KHI ĐÃ ĐĂNG NHẬP
+================================= */
+#divTaikhoan .dropbtn {
+  background-color: #eee;    /* Nút màu xám nhạt */
+  color: black;              /* Chữ màu đen */
+  border-radius: 20px;       /* Bo tròn nút */
+  padding: 60px 14px;        /* Kích thước lớn hơn */
+}
+
+#ttTaikhoan {
+  background-color: #f0f0f0; /* Nền vùng thông tin */
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#ttTaikhoan ul {
+  list-style: none;          /* Bỏ ký hiệu danh sách */
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+#ttTaikhoan li {
+  margin-bottom: 6px;
+}
+
+#passEye {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#ttTaikhoan div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#ttTaikhoan button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #fff;
+}
+
+#ttTaikhoan button#dangXuat {
+  background-color: #d9534f; /* Nút đỏ */
+  color: white;
+  font-weight: bold;
+}
+
+#ttTaikhoan button#doiMK:hover,
+#ttTaikhoan button#dangXuat:hover {
+  opacity: 0.9; /* Làm mờ nhẹ khi hover */
+}
+
+
+/* ================================
+   RESPONSIVE CHO MÀN HÌNH NHỎ
+================================= */
+@media screen and (max-width: 768px) {
+  .header-right {
+    top: 10px;
+    left: auto;     /* Bỏ căn trái */
+    right: 10px;    /* Căn phải */
+  }
+
+  #ttTaikhoan div {
+    flex-direction: column;  /* Dọc thay vì ngang */
+    align-items: stretch;
+  }
+
+  #ttTaikhoan button {
+    width: 100%;             /* Nút chiếm toàn bộ chiều ngang */
+  }
+}

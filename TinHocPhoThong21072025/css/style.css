@@ -1,0 +1,113 @@
+/* Thiết lập font chữ chung và loại bỏ margin/padding mặc định của trình duyệt */
+body {
+    font-family: 'Arial', Open Sans, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d8ecff; /* Màu nền tổng thể */
+}
+
+/* Khối nội dung chính */
+.container {
+    margin: 0 auto;                /* Căn giữa ngang */
+    background-color: #ffffff;     /* Màu nền bên trong */
+    padding: 1px 10px;            /* Thêm khoảng cách trên/dưới: 20px, trái/phải: 40px */
+    width: 80%;                    /* Chiếm 80% chiều ngang toàn trang */
+    box-sizing: border-box;        /* Đảm bảo padding không làm tăng chiều rộng */
+}
+
+
+
+/* VÙNG CHÂN TRANG (FOOTER CHÍNH) */
+footer {
+    background-color: #f05123;  /* Màu nền xanh dương cho footer */
+    color: #ffffff;             /* Màu chữ xám nhạt */
+    padding: 2px 0;             /* Khoảng cách trên & dưới là 5px, trái/phải là 0 */
+    width: 80%;                 /* Footer chiếm 80% chiều ngang toàn trang */
+    margin: 0 auto;             /* Căn giữa footer theo chiều ngang */
+}
+
+/* CONTAINER CHỨA CÁC CỘT TRONG FOOTER */
+.footer-container {
+    width: 95%;                 /* Container chiếm 95% chiều ngang của footer */
+    max-width: 1300px;          /* Giới hạn chiều rộng tối đa là 1300px */
+    margin: 0 auto;             /* Căn giữa container trong footer */
+    display: flex;              /* Sử dụng Flexbox để sắp xếp các cột */
+    flex-wrap: wrap;            /* Cho phép các cột tự động xuống dòng khi không đủ chỗ */
+    justify-content: space-between; /* Căn đều các cột và tạo khoảng cách giữa chúng */
+}
+
+/* MỖI CỘT TRONG FOOTER */
+.footer-column {
+    flex: 1 1 180px;            /* Cho phép co giãn, chiều rộng tối thiểu là 180px */
+    margin: 5px;                /* Khoảng cách giữa các cột là 5px */
+    font-size: 14px;  
+}
+
+/* DANH SÁCH TRONG CỘT - BỎ DẤU CHẤM */
+.footer-column ul {
+    list-style: none;          /* Loại bỏ dấu chấm mặc định của danh sách */
+    padding: 0;                /* Xoá khoảng cách bên trong mặc định */
+}
+
+/* TIÊU ĐỀ CỦA MỖI CỘT */
+.footer-column span {
+    font-size: 14px;           /* Cỡ chữ cho tiêu đề của từng cột */
+    color: #ffff00;            /* Màu vàng nổi bật */
+    font-weight: bold;         /* In đậm tiêu đề */
+    display: block;            /* Hiển thị dưới dạng khối để hỗ trợ margin */
+    margin-bottom: 8px;        /* Khoảng cách dưới tiêu đề */
+}
+
+/* MỖI DÒNG MỤC TRONG CỘT */
+.footer-column li {
+    margin-bottom: 4px;        /* Khoảng cách giữa các dòng trong danh sách */
+}
+
+/* LIÊN KẾT MẶC ĐỊNH TRONG FOOTER */
+.footer-column a {
+    text-decoration: none;     /* Bỏ gạch chân mặc định của liên kết */
+    color: #ffffff;            /* Màu xám nhạt cho liên kết */
+}
+
+/* LIÊN KẾT KHI RÊ CHUỘT TRONG FOOTER */
+.footer-column a:hover {
+    color: #d4c9c9;            /* Khi rê chuột vào, chuyển màu liên kết thành trắng */
+}
+
+/* PHẦN THÔNG TIN LIÊN HỆ HOẶC BẢN QUYỀN DƯỚI CÙNG */
+.footer-info {
+    width: 100%;               /* Chiếm toàn bộ chiều ngang */
+    border-top: 1px solid #fff;/* Đường kẻ ngang phía trên làm ranh giới */
+    text-align: left;          /* Căn trái nội dung */
+    font-size: 13px;           /* Cỡ chữ nhỏ hơn so với phần chính */
+}
+
+/* LIÊN KẾT TRONG footer-info */
+.footer-info a {
+    color: #d4c9c9;            /* Màu liên kết giống màu chữ chung */
+    text-decoration: none;     /* Bỏ gạch chân mặc định */
+}
+
+/* KHI RÊ CHUỘT VÀO LIÊN KẾT TRONG footer-info */
+.footer-info a:hover {
+    color: #ffffff;            /* Chuyển thành màu trắng khi rê chuột vào */
+}
+
+/* RESPONSIVE: MÀN HÌNH DƯỚI 768PX - MỖI CỘT CHIẾM 45% */
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 1 1 45%;         /* Mỗi cột chiếm khoảng 45% chiều ngang */
+    }
+}
+
+/* RESPONSIVE: MÀN HÌNH DƯỚI 480PX - CỘT FULL WIDTH + CĂN GIỮA */
+@media (max-width: 480px) {
+    .footer-column {
+        flex: 1 1 100%;        /* Mỗi cột chiếm toàn bộ chiều ngang */
+        text-align: center;    /* Căn giữa nội dung trong cột */
+    }
+
+    .footer-info {
+        font-size: 14px;       /* Tăng kích thước chữ cho dễ đọc trên thiết bị nhỏ */
+    }
+}

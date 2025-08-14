@@ -1,0 +1,199 @@
+/* === Phần chính của trang === */
+main {
+    width: 100%;                 /* Phần chính chiếm toàn bộ chiều rộng */
+    margin: 5px 0;               /* Cách lề trên và dưới mỗi 5px */
+    min-height: 100px;           /* Chiều cao tối thiểu là 100px */
+}
+
+main > div {
+    margin: 10px 10%;            /* Cách lề trên là 10px, trái/phải mỗi bên là 10% */
+}
+
+/* ==== Form Đăng Ký ==== */
+.container .register-form {
+    width: 100%;                 /* Form đăng ký chiếm toàn bộ chiều rộng container */
+    margin: 20px auto;           /* Cách trên/dưới 20px và căn giữa theo chiều ngang */
+}
+
+.register-form h2 {
+    text-align: center;          /* Căn giữa tiêu đề */
+    color: #005ad0;              /* Màu xanh đậm */
+    font-family: 'K2D', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main .row {
+    margin: 5px 0;               /* Mỗi hàng cách trên/dưới 5px */
+}
+
+main .row label {
+    text-align: right;           /* Căn phải cho nhãn */
+    display: inline-block;       /* Hiển thị theo khối nhưng nằm trên cùng một hàng */
+    width: 15%;                  /* Chiếm 24% chiều rộng */
+}
+
+main .row input {
+    width: 25%;                  /* Ô nhập liệu chiếm 71% chiều rộng */
+    height: 30px;                /* Chiều cao là 30px */
+    font-size: 14px;             /* Kích thước chữ trong input */
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+main .row span {
+    color: red;                  /* Các dấu sao * hoặc thông báo lỗi có màu đỏ */
+}
+
+main .row div {
+    margin-left: 16%;            /* Dịch khối div con sang trái 25% */
+}
+
+main .row:last-child {
+    text-align: center;          /* Căn giữa dòng cuối cùng (chứa nút) */
+}
+
+main .row:last-child button {
+    color: white;                /* Màu chữ trắng */
+    background-color: #0091ff;   /* Nền xanh ngọc */
+    border-radius: 5px;          /* Bo góc nhẹ */
+    border: none;                /* Bỏ viền */
+    font-size: 14px;             /* Cỡ chữ nút */
+    padding: 6px 8px;            /* Padding trên/dưới 6px, trái/phải 8px */
+    margin: 10px 5px;               /* Khoảng cách trái/phải giữa các nút */
+    cursor: pointer; /* Rê chuột sẽ hiện bàn tay */
+    transition: background-color 0.1s ease; /* Thêm hiệu ứng mượt */
+
+}
+
+main .row:last-child button:hover {
+    background-color: #003e9e; /* Màu nền khi rê chuột vào */
+}
+
+/* === Ngày sinh === */
+main #ngaysinh {
+    width: 160px;                /* Chiều rộng của input ngày sinh */
+}
+
+/* === Giới tính === */
+main #gioitinh label:first-child {
+    margin-left: 9%;            /* Dịch label đầu tiên sang phải 13% */
+}
+
+main #gioitinh label {
+    display: inline;             /* Hiển thị label giới tính nằm cùng hàng */
+}
+
+main #gioitinh input {
+    width: 30px;                 /* Kích thước radio button nhỏ gọn */
+    height: 15px;
+}
+
+
+/* === Đối tượng ===*/
+.row select {
+  width: 160px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+.register-form select {
+    font-size: 14px;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  color: #777;
+  pointer-events: none;
+}
+
+.input-icon input,
+.input-icon select {
+  padding-left: 30px; /* để icon không đè lên chữ */
+}
+
+/* === Khối bao ngoài mục lục hoặc phần nội dung (nếu có) === */
+main .phan-wrapper {
+    background: #ebeff1;         /* Màu nền xám nhạt */
+    border: 1px solid #000000;   /* Viền đen */
+    border-radius: 10px;         /* Bo góc khối */
+    padding: 10px;               /* Khoảng đệm trong 10px */
+    margin-top: 10px;            /* Cách phần trên 10px */
+}
+
+main .phan-wrapper .phan-header {
+    text-align: center;          /* Căn giữa tiêu đề */
+    font-size: 18px;             /* Cỡ chữ lớn */
+    font-weight: bold;           /* Chữ in đậm */
+    color: #333333;              /* Màu xám đậm */
+    margin-bottom: 1px;          /* Khoảng cách phía dưới nhỏ */
+}
+
+/* === Danh sách tóm tắt nội dung === */
+main #bangTomTat {
+    list-style: none;            /* Bỏ dấu đầu dòng danh sách */
+    padding-left: 0;             /* Bỏ lề trái */
+}
+
+main #bangTomTat .tomtat {
+    display: block;              /* Hiển thị mỗi mục trên một dòng */
+    color: black;                /* Màu chữ đen */
+    text-decoration: none;       /* Bỏ gạch chân liên kết */
+    padding: 2px 0;              /* Cách trên/dưới mỗi mục 2px */
+    transition: color 0.2s ease; /* Hiệu ứng chuyển màu mượt khi hover */
+    font-weight: 500;            /* Độ đậm chữ vừa phải */
+}
+
+main #bangTomTat .tomtat:hover {
+    color: #005ad0;              /* Màu xanh khi rê chuột vào */
+}
+
+/* === Nút quay về đầu trang === */
+#backToTop {
+    position: fixed;             /* Cố định vị trí trên trang */
+    right: 30px;                 /* Cách mép phải 30px */
+    bottom: 20px;                /* Cách mép dưới 20px */
+    background-color: #005ad0;   /* Màu nền xanh */
+    padding: 10px 15px;          /* Padding trong nút */
+    border-radius: 30px;         /* Bo tròn thành hình viên thuốc */
+    font-weight: bold;           /* Chữ đậm */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Đổ bóng nhẹ */
+}
+
+#backToTop a {
+    color: white;                /* Màu chữ trắng */
+    text-decoration: none;       /* Bỏ gạch chân */
+    font-size: 16px;             /* Kích thước chữ */
+}
+
+/* === Responsive === */
+@media (max-width: 688px) {
+    main .container {
+        width: 80%;              /* Trên màn hình nhỏ, container co lại 80% */
+    }
+}
+
+@media (max-width: 558px) {
+    main .row label {
+        width: 100%;             /* Label chiếm 100% chiều ngang */
+        text-align: left ;        /* Căn trái label */
+    }
+
+    main #gioitinh label:first-child {
+        margin-left: 0;          /* Bỏ khoảng cách trái */
+    }
+
+    main .row input {
+        width: 93%;              /* Input co lại vừa khung hơn */
+    }
+
+    main .row div {
+        margin-left: 0;          /* Không đẩy div sang trái nữa */
+    }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <!-- === Cấu hình cơ bản của trang === -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>E-Learning</title>
+  <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon" />
+
+  <!-- === Thư viện bên ngoài === -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--elearning-->
+
+  <!-- === Tệp CSS nội bộ === -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/trangchu.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/topnav.css" />
+  <link rel="stylesheet" href="../css/lienhe.css" />
+
+  <!-- === Thư viện và mã JavaScript === -->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/trangchu.js" defer></script>
+  <script src="../js/taikhoan.js" defer></script>
+  <script src="../js/responsive.js" defer></script>
+  <script src="lienhe.js"></script>
+
+  <!-- Font chữ -->
+  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- === Banner đầu trang === -->
+  <div class="banner-top" style="position: relative;">
+    <a href="trangchu.html" class="banner reloadTrang">
+      <img src="../img/banner.png" alt="Banner Tin học phổ thông" style="width: 100%;" />
+    </a>
+
+    <!-- === Khu vực tài khoản (góc phải) === -->
+    <div class="header-right" style="position: absolute; bottom: 10px; right: 20px; z-index: 2;">
+      <!-- Chưa đăng nhập -->
+      <div class="dropdown" id="dkdn">
+        <button class="dropbtn" onclick="toggle_dropdown()">
+          Tài khoản <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="dangky.html">Đăng ký</a>
+          <a href="dangnhap.html">Đăng nhập</a>
+        </div>
+      </div>
+
+      <!-- Đã đăng nhập -->
+      <div id="divTaikhoan" class="dropdown" style="display: none;">
+        <button id="taikhoan" class="dropbtn"></button>
+        <div class="dropdown-content" id="ttTaikhoan">
+          <ul id="info">
+            <li><b>Tên đăng nhập:</b> <span id="tenDangnhap"></span></li>
+            <li>
+              <b>Mật khẩu:</b> <span id="matkhau"></span>
+              <span id="passEye">
+                <img width="22" src="../img/closePassEye.png" alt="Ẩn/hiện mật khẩu" />
+              </span>
+            </li>
+            <li><b>Họ và tên:</b> <span id="hoten"></span></li>
+            <li><b>Số điện thoại:</b> <span id="sdt"></span></li>
+          </ul>
+          <div>
+            <button type="button" id="doiMK">Đổi mật khẩu</button>
+            <button type="button" id="dangXuat">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Menu điều hướng chính === -->
+  <div class="menu-container">
+    <nav class="topnav" id="myTopnav">
+      <a href="trangchu.html">TRANG CHỦ</a>
+      <a href="gioithieu.html">GIỚI THIỆU</a>
+
+      <!-- Dropdown: Chiêu sinh -->
+      <div class="dropdown">
+        <button class="dropbtn">CHIÊU SINH</button>
+        <div class="dropdown-content">
+          <a href="khoi10.html">Khối 10</a>
+          <a href="khoi11.html">Khối 11</a>
+          <a href="khoi12.html">Khối 12</a>
+        </div>
+      </div>
+
+      <a href="elearning.html">E-LEARNING</a>
+
+      <a href="lienhe.html">LIÊN HỆ</a>
+
+      <!-- Biểu tượng menu mobile -->
+      <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </div>
+
+<!-- === Nội dung chính === -->
+<main>
+  <div class="container">
+    <div class="contact-card">
+      
+      <!-- Ảnh & Thông tin -->
+      <div class="left-section">
+        <div class="contact-image">
+          <img src="../img/chandung-lienhe.jpg" alt="Ảnh Quản Trị">
+        </div>
+        <h2>NGUYỄN VĂN ĐỊNH</h2>
+        <p class="role">Giáo viên Tin học - Trường THPT ...</p>
+        <p class="quote">"Học để mở mang, làm để khẳng định" – Cùng nhau tiến bước vào kỷ nguyên số</p>
+
+        <!-- Mạng xã hội -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/nguyendinh.com.vn/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.youtube.com/@thaynguyenvana" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <!-- Mã QR liên hệ -->
+        <div class="qr-contact">
+          <img src="../img/qr-zalo.jpg" alt="QR Liên hệ nhanh">
+          <p>Quét mã để kết bạn Zalo</p>
+        </div>
+      </div>
+
+      <!-- Nội dung & Form -->
+      <div class="right-section">
+
+        <!-- Thông tin liên hệ -->
+        <div class="info-block">
+          <h3>THÔNG TIN LIÊN HỆ</h3>
+
+          <div class="info-item"><span class="icon">👤</span>Nguyễn Văn Định</div>
+          <div class="info-item"><span class="icon">📱</span>0825 701 543</div>
+          <div class="info-item"><span class="icon">📧</span> <a href="mailto:nvdinhm1@gmail.com">nvdinhm1@gmail.com</a></div>
+          <div class="info-item"><span class="icon">📍</span>An Giang</div>
+          <div class="info-item"><span class="icon">🌐</span><a href="https://tinhocphothong.edu.vn" target="_blank">tinhocphothong.edu.vn</a></div>       
+          
+          <div class="status online">🟢 Đang trực tuyến</div>
+        </div>
+
+
+        <!-- Form gửi tin nhắn -->
+        <div class="contact-form">
+          <h3>ĐÓNG GÓP Ý KIẾN - PHẢN HỒI</h3>
+          <form id="messageForm">
+            <div class="input-group">
+              <label for="fullname">Họ và tên</label>
+              <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+              <label for="phone">Số điện thoại</label>
+              <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,11}" title="Số điện thoại phải gồm 10-11 chữ số">
+            </div>
+
+            <div class="input-group">
+              <label for="subject">Tiêu đề</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="input-group textarea-group">
+              <label for="message">Nội dung</label>
+              <textarea id="message" name="message" rows="10" required></textarea>
+            </div>
+
+            <p><small><span class="required">*</span> Thông tin bắt buộc nhập</small></p>
+
+            <div class="button-group">
+              <button type="submit" id="sendBtn">Gửi</button>
+              <button type="reset" id="resetBtn">Xóa</button>
+            </div>
+          </form>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+  <!-- === Nút trở về đầu trang === -->
+  <div id="backToTop">
+    <a href="#top">⬆</a>
+  </div>
+
+  <!-- === Chân trang (footer) === -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <ul>
+          <span>Thông tin về</span>
+          <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+          <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Tài khoản</span>
+          <li><a href="#">Tài khoản của tôi</a></li>
+          <li><a href="dangnhap.html">Đăng nhập</a></li>
+          <li><a href="dangky.html">Đăng ký</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Hỗ trợ</span>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Quy định sử dụng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul>
+          <span>Liên hệ</span>
+          <li>Website: <a href="https://hoctinonline.vn" target="_blank" rel="noopener noreferrer">HocTinOnline.vn</a></li>
+          <li>Địa chỉ: Tỉnh An Giang, Việt Nam</li>
+          <li>Email: <a href="mailto:nvdinhm1@gmail.com.vn">nvdinhm1@gmail.com.vn</a></li>
+          <li>Hotline: 0825 701 543</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Thông tin bản quyền -->
+    <div class="footer-info" style="text-align: center; padding-top: 2px;">
+      <p>&copy; 2025 <strong><a href="trangchu.html" style="text-decoration: none; color: inherit;">HocTinOnline.vn</a></strong> – Website dạy và học Tin học phổ thông.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
